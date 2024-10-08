@@ -208,7 +208,7 @@ body{
     transform: scale(1.1);
     text-shadow: 1px 1px black;
 }
-.typingtext{
+/* .typingtext{
     z-index: 10;
     position: relative;
     bottom: -35%;
@@ -217,17 +217,17 @@ body{
     font-size: 1.5rem;
     color:white;
     text-shadow: 1px 1px sandybrown;
-}
+} */
 @media only screen and (max-width: 1000px){
     .cylinder-stack{
         width: 70%;
         height: 28%;
   
       }
-       .typingtext{
+       /* .typingtext{
         font-size: 1.3rem;
       left: 12%;
-       }
+       } */
 }
 @media only screen and (max-width: 600px) {
 
@@ -268,8 +268,8 @@ body{
         left: 0;
         bottom: 4%;
       }
-       .typingtext{
+       /* .typingtext{
         font-size: 1.2rem;
       margin: auto;
-       }
+       } */
   }

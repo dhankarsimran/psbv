@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
-import Typical from 'react-typical';
 import './styles.css';
 const LandingPage = () => {
   const lettersRef = useRef([]);
@@ -81,12 +80,12 @@ const LandingPage = () => {
       <button className='btn'>ENTER</button>
       </div>
       <div className="cylinder cylinder-bottom">
-      <Typical 
+      {/* <Typical 
      className="typingtext"
       steps={['The world of pipes', 2000, 'High-Quality Stainless Steel sphere', 2000]}
       loop={1}
       wrapper="p"
-    />
+    /> */}
       </div>
     </div>
      {/* <div className='bottom'>
