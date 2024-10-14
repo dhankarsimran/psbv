@@ -12,9 +12,14 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import { Height } from "@mui/icons-material";
 
 const Carousel = () => {
+  const truncateText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+    }
+    return text;
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -82,9 +87,8 @@ const Carousel = () => {
           {" "}
           I have been using P.S.B.V. Pipe & Fitting for all my stainless steel
           pipe needs, and I’m extremely impressed with the quality of their
-          products. The pipes are durable, reliable, and precisely crafted. I
-          highly recommend them to anyone looking for high-quality pipes and
-          fittings!
+          products. I highly recommend them to anyone looking for high-quality
+          pipes and fittings!
         </Typography>
         <Typography
           sx={{
@@ -124,7 +128,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Excellent Quality and Service!"
+          "Reliable Products, On-Time Delivery!"
         </Typography>
         <Typography
           sx={{
@@ -135,11 +139,10 @@ const Carousel = () => {
           }}
         >
           {" "}
-          I have been using P.S.B.V. Pipe & Fitting for all my stainless steel
-          pipe needs, and I’m extremely impressed with the quality of their
-          products. The pipes are durable, reliable, and precisely crafted. I
-          highly recommend them to anyone looking for high-quality pipes and
-          fittings!
+          We’ve been sourcing stainless steel pipes and fittings from P.S.B.V.
+          for our construction projects, and they have never disappointed us. A
+          great company to work with if you're looking for reliability and
+          consistency.
         </Typography>
         <Typography
           sx={{
@@ -156,7 +159,7 @@ const Carousel = () => {
           }}
         >
           {" "}
-          – Rohit Sharma
+          – Neha Verma
         </Typography>
       </Box>
       <Box
@@ -178,7 +181,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Excellent Quality and Service!"
+          "Top-Notch Pipe and Fitting Solutions!"
         </Typography>
         <Typography
           sx={{
@@ -189,11 +192,10 @@ const Carousel = () => {
           }}
         >
           {" "}
-          I have been using P.S.B.V. Pipe & Fitting for all my stainless steel
-          pipe needs, and I’m extremely impressed with the quality of their
-          products. The pipes are durable, reliable, and precisely crafted. I
-          highly recommend them to anyone looking for high-quality pipes and
-          fittings!
+          P.S.B.V. Pipe & Fitting provides some of the best stainless steel
+          pipes and fittings in the market. The strength and finish of their
+          products are excellent, making them perfect for our manufacturing
+          requirements.
         </Typography>
         <Typography
           sx={{
@@ -210,7 +212,7 @@ const Carousel = () => {
           }}
         >
           {" "}
-          – Rohit Sharma
+          – Vikas Singh
         </Typography>
       </Box>
       <Box
@@ -232,7 +234,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Excellent Quality and Service!"
+          "Affordable and High-Quality Products!"
         </Typography>
         <Typography
           sx={{
@@ -243,11 +245,10 @@ const Carousel = () => {
           }}
         >
           {" "}
-          I have been using P.S.B.V. Pipe & Fitting for all my stainless steel
-          pipe needs, and I’m extremely impressed with the quality of their
-          products. The pipes are durable, reliable, and precisely crafted. I
-          highly recommend them to anyone looking for high-quality pipes and
-          fittings!
+          The quality of stainless steel pipes from P.S.B.V. Pipe & Fitting is
+          outstanding, and their pricing is very competitive. We have used their
+          pipes in several projects, and the products have always been reliable
+          and durable.
         </Typography>
         <Typography
           sx={{
@@ -264,7 +265,7 @@ const Carousel = () => {
           }}
         >
           {" "}
-          – Rohit Sharma
+          – Anjali Patel
         </Typography>
       </Box>
       <Box
@@ -286,7 +287,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Excellent Quality and Service!"
+          "Great Service and Expertise!"
         </Typography>
         <Typography
           sx={{
@@ -297,11 +298,9 @@ const Carousel = () => {
           }}
         >
           {" "}
-          I have been using P.S.B.V. Pipe & Fitting for all my stainless steel
-          pipe needs, and I’m extremely impressed with the quality of their
-          products. The pipes are durable, reliable, and precisely crafted. I
-          highly recommend them to anyone looking for high-quality pipes and
-          fittings!
+          P.S.B.V. Pipe & Fitting has become our go-to supplier for stainless
+          steel pipes and fittings. The service is professional, and the quality
+          of their products speaks for itself. Highly recommended!
         </Typography>
         <Typography
           sx={{
@@ -318,7 +317,7 @@ const Carousel = () => {
           }}
         >
           {" "}
-          – Rohit Sharma
+          – Amit Khurana
         </Typography>
       </Box>
       {/* Add more cards as needed */}

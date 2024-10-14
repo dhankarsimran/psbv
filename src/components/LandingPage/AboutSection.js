@@ -265,14 +265,7 @@ const AboutSection = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                sx={{
-                  display: { xs: "none", md: "block" },
-                }}
-              >
+              <Grid item xs={12} md={6}>
                 <Box
                   sx={{
                     display: "flex",
