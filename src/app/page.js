@@ -1,95 +1,47 @@
+"use client";
+import React, { useEffect, useState } from "react";
+import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
-import styles from "./page.module.css";
-
+import Grid from "@mui/material/Grid";
+import PublicIcon from "@mui/icons-material/Public";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import HighQualityIcon from "@mui/icons-material/HighQuality";
+import SecurityIcon from "@mui/icons-material/Security";
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import HeroSection from "@/components/LandingPage/HeroSection";
+import AboutSection from "@/components/LandingPage/AboutSection";
+import ProductSection from "@/components/LandingPage/ProductSection";
+import CompanySection from "@/components/LandingPage/CompanySection";
+import CustomerSection from "@/components/LandingPage/CustomerSection";
+const images = [
+  "/images/psbvsteel1.jpg",
+  "/images/psbvsteel2.jpg", // Add your second image path here
+  "/images/psbvsteel3.jpg", // Add your third image path here
+];
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [currentImage, setCurrentImage] = useState(0);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000); // Change image every 2 seconds
+
+    return () => clearInterval(interval); // Clear the interval on component unmount
+  }, []);
+  return (
+    <>
+      {/* SECTION 1 */}
+      <HeroSection />
+      {/* SECTION 2 */}
+      <AboutSection />
+      {/* SECTION 3 */}
+      <ProductSection />
+      {/* SECTION 4 */}
+      <CompanySection />
+      {/* SECTION 5 */}
+      <CustomerSection />
+    </>
   );
 }
