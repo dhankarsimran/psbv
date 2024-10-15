@@ -114,8 +114,8 @@ const HeroSection = () => {
             >
               <Image
                 src={image}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 alt={`Steel Pipes ${index + 1}`}
               />
             </Box>

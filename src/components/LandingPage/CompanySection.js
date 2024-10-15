@@ -48,7 +48,7 @@ const CompanySection = () => {
                 overflowY: { xs: "auto", md: "unset" },
               }}
             >
-              <Grid itme sx={12} md={12}>
+              <Grid item sx={12} md={12}>
                 {" "}
                 <Box>
                   <Typography
