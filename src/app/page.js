@@ -15,6 +15,7 @@ import AboutSection from "@/components/LandingPage/AboutSection";
 import ProductSection from "@/components/LandingPage/ProductSection";
 import CompanySection from "@/components/LandingPage/CompanySection";
 import CustomerSection from "@/components/LandingPage/CustomerSection";
+import GallerySection from "@/components/LandingPage/GallerySection";
 const images = [
   "/images/psbvsteel1.jpg",
   "/images/psbvsteel2.jpg", // Add your second image path here
@@ -42,6 +43,8 @@ export default function Home() {
       <CompanySection />
       {/* SECTION 5 */}
       <CustomerSection />
+      {/* SECTION 6 */}
+      <GallerySection />
     </>
   );
 }
