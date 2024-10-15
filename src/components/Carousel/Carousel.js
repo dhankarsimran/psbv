@@ -139,10 +139,10 @@ const Carousel = () => {
           }}
         >
           {" "}
-          We’ve been sourcing stainless steel pipes and fittings from P.S.B.V.
-          for our construction projects, and they have never disappointed us. A
-          great company to work with if you're looking for reliability and
-          consistency.
+          We&apos;ve been sourcing stainless steel pipes and fittings from
+          P.S.B.V. for our construction projects, and they have never
+          disappointed us. A great company to work with if you&apos;re looking
+          for reliability and consistency.
         </Typography>
         <Typography
           sx={{
