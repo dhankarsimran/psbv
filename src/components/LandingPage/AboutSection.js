@@ -65,8 +65,8 @@ const AboutSection = () => {
                 textAlign: "end",
               }}
             >
-              ~ With P.S.B.V., you're not just buying steel, you're investing in
-              trust.
+              ~ With P.S.B.V., you&apos;re not just buying steel, you&apos;re
+              investing in trust.
             </Typography>
             <Box sx={{ textAlign: "center" }}>
               <Button

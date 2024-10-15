@@ -3,13 +3,17 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
+// function srcset(image, size, rows = 1, cols = 1) {
+//   return {
+//     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+//     srcSet: `${image}?w=${size * cols}&h=${
+//       size * rows
+//     }&fit=crop&auto=format&dpr=2 2x`,
+//   };
+// }
 function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
+  return `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`;
 }
 const itemData = [
   {
@@ -268,10 +272,17 @@ const GallerySection = () => {
               cols={item.cols || 1}
               rows={item.rows || 1}
             >
-              <img
+              {/* <img
                 {...srcset(item.img, 121, item.rows, item.cols)}
                 alt={item.title}
                 loading="lazy"
+              /> */}
+              <Image
+                src={srcset(item.img, 121, item.rows, item.cols)} // Use the srcset function to generate the URL
+                width={121 * (item.cols || 1)} // Set width dynamically based on cols
+                height={121 * (item.rows || 1)} // Set height dynamically based on rows
+                alt={item.title}
+                style={{ objectFit: "cover" }} // Maintain object fit
               />
             </ImageListItem>
           ))}

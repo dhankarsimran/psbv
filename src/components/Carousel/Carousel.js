@@ -74,7 +74,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Excellent Quality and Service!"
+          Excellent Quality and Service!
         </Typography>
         <Typography
           sx={{
@@ -128,7 +128,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Reliable Products, On-Time Delivery!"
+          Reliable Products, On-Time Delivery!
         </Typography>
         <Typography
           sx={{
@@ -181,7 +181,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Top-Notch Pipe and Fitting Solutions!"
+          Top-Notch Pipe and Fitting Solutions!
         </Typography>
         <Typography
           sx={{
@@ -234,7 +234,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Affordable and High-Quality Products!"
+          Affordable and High-Quality Products!
         </Typography>
         <Typography
           sx={{
@@ -287,7 +287,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          "Great Service and Expertise!"
+          Great Service and Expertise!
         </Typography>
         <Typography
           sx={{
