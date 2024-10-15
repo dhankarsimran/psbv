@@ -70,7 +70,7 @@ const GallerySection = () => {
         sx={{
           backgroundColor: "#6e6e6e",
           width: "100vw",
-          minHeight: "100vh",
+          pb: 6,
           textAlign: "center",
         }}
       >
