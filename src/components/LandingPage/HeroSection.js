@@ -90,6 +90,7 @@ const HeroSection = () => {
             </Button>
           </Box>
         </Box>
+
         {/* IMAGE BACKGROUND */}
         <Box
           sx={{

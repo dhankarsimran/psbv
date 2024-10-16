@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 // function srcset(image, size, rows = 1, cols = 1) {
 //   return {
 //     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -78,215 +80,221 @@ const GallerySection = () => {
           textAlign: "center",
         }}
       >
-        <Typography
-          sx={{
-            p: 4,
-            fontSize: { xs: "2rem", md: "3rem" },
-            fontWeight: "600",
-            letterSpacing: "0.1rem",
-            color: "#9eef0a",
-            textShadow: "2px 2px 5px rgba(0,0,0,1)",
-          }}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }} // Starts off invisible and 50px lower
+          whileInView={{ opacity: 1, y: 0 }} // Becomes visible and moves up to normal position
+          transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
         >
-          {" "}
-          Our Featured Products
-        </Typography>
-        <Box
-          sx={{
-            width: "100%",
-            display: { xs: "none", md: "flex" },
-            justifyContent: "space-around",
-          }}
-        >
-          <Box
+          <Typography
             sx={{
-              width: { xs: "25%", md: "20%" },
-              height: "70vh",
-              borderLeft: "10px solid white",
-              borderRight: "10px solid white",
-              borderRadius: "2px",
-              transition: "width 0.5s ease",
-              // "&:hover": { width: { xs: "50%", md: "25%" }, cursor: "pointer" },
+              p: 4,
+              fontSize: { xs: "2rem", md: "3rem" },
+              fontWeight: "600",
+              letterSpacing: "0.1rem",
+              color: "#9eef0a",
+              textShadow: "2px 2px 5px rgba(0,0,0,1)",
             }}
           >
-            <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/carousel11.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/carousel12.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-            </Slider>
-          </Box>
+            {" "}
+            Our Featured Products
+          </Typography>
           <Box
             sx={{
-              width: { xs: "25%", md: "20%" },
-              height: "70vh",
-              borderLeft: "10px solid white",
-              borderRight: "10px solid white",
-              borderRadius: "2px",
+              width: "100%",
+              display: { xs: "none", md: "flex" },
+              justifyContent: "space-around",
             }}
           >
-            <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/carousel21.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/psbvsteel1.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-            </Slider>
-          </Box>
-          <Box
-            sx={{
-              width: { xs: "25%", md: "20%" },
-              height: "70vh",
-              borderLeft: "10px solid white",
-              borderRight: "10px solid white",
-              borderRadius: "2px",
-            }}
-          >
-            <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/carousel31.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/carousel32.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-            </Slider>
-          </Box>
-          <Box
-            sx={{
-              width: { xs: "25%", md: "20%" },
-              height: "70vh",
-              borderLeft: "10px solid white",
-              borderRight: "10px solid white",
-              borderRadius: "2px",
-            }}
-          >
-            <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/carousel41.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "70vh",
-                  backgroundImage: 'url("/images/psbvsteel2.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderTop: "10px solid white",
-                  borderBottom: "10px solid white",
-                  borderRadius: "2px",
-                }}
-              ></Box>
-            </Slider>
-          </Box>
-        </Box>
-        {/* SMALL SCREEN */}
-        <ImageList
-          sx={{
-            width: "100%",
-            height: 484,
-            display: { md: "none" },
-            overflow: "hidden",
-            backgroundColor: "white",
-          }}
-          variant="quilted"
-          cols={4}
-          rowHeight={121}
-        >
-          {itemData.map((item) => (
-            <ImageListItem
-              key={item.img}
-              cols={item.cols || 1}
-              rows={item.rows || 1}
+            <Box
+              sx={{
+                width: { xs: "25%", md: "20%" },
+                height: "70vh",
+                borderLeft: "10px solid white",
+                borderRight: "10px solid white",
+                borderRadius: "2px",
+                transition: "width 0.5s ease",
+                // "&:hover": { width: { xs: "50%", md: "25%" }, cursor: "pointer" },
+              }}
             >
-              {/* <img
+              <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/carousel11.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/carousel12.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+              </Slider>
+            </Box>
+            <Box
+              sx={{
+                width: { xs: "25%", md: "20%" },
+                height: "70vh",
+                borderLeft: "10px solid white",
+                borderRight: "10px solid white",
+                borderRadius: "2px",
+              }}
+            >
+              <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/carousel21.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/psbvsteel1.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+              </Slider>
+            </Box>
+            <Box
+              sx={{
+                width: { xs: "25%", md: "20%" },
+                height: "70vh",
+                borderLeft: "10px solid white",
+                borderRight: "10px solid white",
+                borderRadius: "2px",
+              }}
+            >
+              <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/carousel31.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/carousel32.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+              </Slider>
+            </Box>
+            <Box
+              sx={{
+                width: { xs: "25%", md: "20%" },
+                height: "70vh",
+                borderLeft: "10px solid white",
+                borderRight: "10px solid white",
+                borderRadius: "2px",
+              }}
+            >
+              <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/carousel41.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: 'url("/images/psbvsteel2.jpg")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+              </Slider>
+            </Box>
+          </Box>
+          {/* SMALL SCREEN */}
+          <ImageList
+            sx={{
+              width: "100%",
+              height: 484,
+              display: { md: "none" },
+              overflow: "hidden",
+              backgroundColor: "white",
+            }}
+            variant="quilted"
+            cols={4}
+            rowHeight={121}
+          >
+            {itemData.map((item) => (
+              <ImageListItem
+                key={item.img}
+                cols={item.cols || 1}
+                rows={item.rows || 1}
+              >
+                {/* <img
                 {...srcset(item.img, 121, item.rows, item.cols)}
                 alt={item.title}
                 loading="lazy"
               /> */}
-              <Image
-                src={srcset(item.img, 121, item.rows, item.cols)} // Use the srcset function to generate the URL
-                width={121 * (item.cols || 1)} // Set width dynamically based on cols
-                height={121 * (item.rows || 1)} // Set height dynamically based on rows
-                alt={item.title}
-                style={{ objectFit: "cover" }} // Maintain object fit
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+                <Image
+                  src={srcset(item.img, 121, item.rows, item.cols)} // Use the srcset function to generate the URL
+                  width={121 * (item.cols || 1)} // Set width dynamically based on cols
+                  height={121 * (item.rows || 1)} // Set height dynamically based on rows
+                  alt={item.title}
+                  style={{ objectFit: "cover" }} // Maintain object fit
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </motion.div>
       </Box>
     </>
   );
