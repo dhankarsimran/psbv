@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import PublicIcon from "@mui/icons-material/Public";
@@ -11,6 +11,13 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { motion } from "framer-motion";
 
 const AboutSection = () => {
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/images/psbvfactory1.jpg"; // Replace with your image path
+    img.onload = () => setBgLoaded(true); // Set state when image is loaded
+  }, []);
   return (
     <>
       <Box
@@ -117,7 +124,9 @@ const AboutSection = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              backgroundImage: 'url("/images/psbvfactory1.jpg")',
+              backgroundImage: bgLoaded
+                ? 'url("/images/psbvfactory1.jpg")'
+                : "none",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",

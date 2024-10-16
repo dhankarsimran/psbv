@@ -5,8 +5,16 @@ import LayersTwoToneIcon from "@mui/icons-material/LayersTwoTone";
 import AssuredWorkloadTwoToneIcon from "@mui/icons-material/AssuredWorkloadTwoTone";
 import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 const CompanySection = () => {
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/images/psbvcompany.jpg"; // Replace with your image path
+    img.onload = () => setBgLoaded(true); // Set state when image is loaded
+  }, []);
   return (
     <>
       {" "}
@@ -35,7 +43,9 @@ const CompanySection = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                backgroundImage: 'url("/images/psbvcompany.jpg")',
+                backgroundImage: bgLoaded
+                  ? 'url("/images/psbvcompany.jpg")'
+                  : "none",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

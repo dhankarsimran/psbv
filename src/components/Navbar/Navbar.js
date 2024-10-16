@@ -12,9 +12,11 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import BusinessIcon from "@mui/icons-material/Business";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -23,18 +25,42 @@ const Navbar = () => {
   };
   const DrawerList = (
     <Box
-      sx={{ width: 250, height: "100%", backgroundColor: "#6e6e6e" }}
+      sx={{
+        width: 250,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "rgba(110,110,110,1)",
+        // backgroundImage: 'url("/images/psbvfactory1.jpg")',
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
+        // backgroundRepeat: "no-repeat",
+      }}
       role="presentation"
       onClick={toggleDrawer(false)}
     >
-      <List>
+      <List
+        sx={{
+          height: "50%",
+          // display: "flex",
+          // flexDirection: "column",
+        }}
+      >
         {[
           { text: "Home", href: "/" },
           { text: "About Us", href: "/about" },
           { text: "Products", href: "/product" },
           { text: "Contact Us", href: "/contact" },
         ].map((item) => (
-          <ListItem key={item.text} disablePadding>
+          <ListItem
+            key={item.text}
+            disablePadding
+            sx={{
+              borderBottom: "2px solid #9eef0a",
+              boxShadow: "5px 5px 5px rgba(0,0,0,0.7)",
+              my: 2,
+            }}
+          >
             <Link href={item.href} passHref legacyBehavior>
               <ListItemButton
                 sx={{
@@ -48,7 +74,7 @@ const Navbar = () => {
                 <ListItemText
                   sx={{
                     p: 2,
-                    color: "white",
+                    color: "#9eef0a",
                     textShadow: "5px 5px 5px rgba(0,0,0,0.7)",
 
                     "&:hover": {
@@ -66,13 +92,33 @@ const Navbar = () => {
           </ListItem>
         ))}
       </List>
+      <Box
+        sx={{
+          height: "35%",
+
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Image
+          src="/images/psbvlogogreen.png"
+          height={400}
+          width={400}
+          alt={`Steel Pipes`}
+        />
+      </Box>
     </Box>
   );
   return (
     <Box sx={{ position: "sticky", top: "0px", zIndex: 10 }}>
       <AppBar
         position="static"
-        sx={{ backgroundColor: "#6e6e6e", p: { xs: 1, md: 0 } }}
+        sx={{
+          backgroundColor: "#6e6e6e",
+          p: { xs: 1, md: 0 },
+          position: "relative",
+        }}
       >
         <Toolbar>
           <Typography
@@ -84,6 +130,7 @@ const Navbar = () => {
           >
             P.S.B.V.
           </Typography>
+
           <Box
             sx={{
               display: { xs: "none", md: "flex" },

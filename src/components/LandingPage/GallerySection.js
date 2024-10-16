@@ -1,5 +1,5 @@
 import { Box, ImageList, ImageListItem, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,11 +27,9 @@ const itemData = [
   {
     img: "/images/carousel12.jpg",
     title: "Burger",
+    cols: 2,
   },
-  {
-    img: "/images/psbvsteel1.jpg",
-    title: "Camera",
-  },
+
   {
     img: "/images/carousel21.jpg",
     title: "Coffee",
@@ -70,6 +68,33 @@ const GallerySection = () => {
     autoplay: true,
     autoplaySpeed: 2000,
   };
+  const [loadedImages, setLoadedImages] = useState([]); // Track loaded images
+
+  const images = [
+    "/images/carousel11.jpg",
+    "/images/carousel12.jpg",
+    "/images/carousel21.jpg",
+    "/images/psbvsteel1.jpg",
+    "/images/carousel31.jpg",
+    "/images/carousel32.jpg",
+    "/images/carousel41.jpg",
+    "/images/psbvsteel2.jpg",
+  ]; // Replace with your image paths
+  useEffect(() => {
+    const loadImages = async () => {
+      const promises = images.map((src) => {
+        return new Promise((resolve) => {
+          const img = new window.Image();
+          img.src = src;
+          img.onload = () => resolve(src);
+        });
+      });
+      const loaded = await Promise.all(promises); // Wait for all images to load
+      setLoadedImages(loaded); // Set the state to mark loaded images
+    };
+
+    loadImages();
+  }, [images]);
   return (
     <>
       <Box
@@ -121,7 +146,11 @@ const GallerySection = () => {
                   sx={{
                     width: "100%",
                     height: "70vh",
-                    backgroundImage: 'url("/images/carousel11.jpg")',
+                    backgroundImage: loadedImages.includes(
+                      "/images/carousel11.jpg"
+                    )
+                      ? 'url("/images/carousel11.jpg")'
+                      : "none",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -134,45 +163,11 @@ const GallerySection = () => {
                   sx={{
                     width: "100%",
                     height: "70vh",
-                    backgroundImage: 'url("/images/carousel12.jpg")',
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    borderTop: "10px solid white",
-                    borderBottom: "10px solid white",
-                    borderRadius: "2px",
-                  }}
-                ></Box>
-              </Slider>
-            </Box>
-            <Box
-              sx={{
-                width: { xs: "25%", md: "20%" },
-                height: "70vh",
-                borderLeft: "10px solid white",
-                borderRight: "10px solid white",
-                borderRadius: "2px",
-              }}
-            >
-              <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "70vh",
-                    backgroundImage: 'url("/images/carousel21.jpg")',
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    borderTop: "10px solid white",
-                    borderBottom: "10px solid white",
-                    borderRadius: "2px",
-                  }}
-                ></Box>
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "70vh",
-                    backgroundImage: 'url("/images/psbvsteel1.jpg")',
+                    backgroundImage: loadedImages.includes(
+                      "/images/carousel12.jpg"
+                    )
+                      ? 'url("/images/carousel12.jpg")'
+                      : "none",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -197,7 +192,11 @@ const GallerySection = () => {
                   sx={{
                     width: "100%",
                     height: "70vh",
-                    backgroundImage: 'url("/images/carousel31.jpg")',
+                    backgroundImage: loadedImages.includes(
+                      "/images/carousel21.jpg"
+                    )
+                      ? 'url("/images/carousel21.jpg")'
+                      : "none",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -210,7 +209,11 @@ const GallerySection = () => {
                   sx={{
                     width: "100%",
                     height: "70vh",
-                    backgroundImage: 'url("/images/carousel32.jpg")',
+                    backgroundImage: loadedImages.includes(
+                      "/images/psbvsteel1.jpg"
+                    )
+                      ? 'url("/images/psbvsteel1.jpg")'
+                      : "none",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -235,7 +238,11 @@ const GallerySection = () => {
                   sx={{
                     width: "100%",
                     height: "70vh",
-                    backgroundImage: 'url("/images/carousel41.jpg")',
+                    backgroundImage: loadedImages.includes(
+                      "/images/carousel31.jpg"
+                    )
+                      ? 'url("/images/carousel31.jpg")'
+                      : "none",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -248,7 +255,57 @@ const GallerySection = () => {
                   sx={{
                     width: "100%",
                     height: "70vh",
-                    backgroundImage: 'url("/images/psbvsteel2.jpg")',
+                    backgroundImage: loadedImages.includes(
+                      "/images/carousel32.jpg"
+                    )
+                      ? 'url("/images/carousel32.jpg")'
+                      : "none",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+              </Slider>
+            </Box>
+            <Box
+              sx={{
+                width: { xs: "25%", md: "20%" },
+                height: "70vh",
+                borderLeft: "10px solid white",
+                borderRight: "10px solid white",
+                borderRadius: "2px",
+              }}
+            >
+              <Slider {...settings} sx={{ width: "100%", height: "100%" }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: loadedImages.includes(
+                      "/images/carousel41.jpg"
+                    )
+                      ? 'url("/images/carousel41.jpg")'
+                      : "none",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    borderTop: "10px solid white",
+                    borderBottom: "10px solid white",
+                    borderRadius: "2px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "70vh",
+                    backgroundImage: loadedImages.includes(
+                      "/images/psbvsteel2.jpg"
+                    )
+                      ? 'url("/images/psbvsteel2.jpg")'
+                      : "none",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
