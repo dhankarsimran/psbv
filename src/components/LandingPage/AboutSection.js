@@ -137,6 +137,7 @@ const AboutSection = () => {
                   width: "100%",
                   color: "white",
                   px: { xs: 2, md: 10 },
+                  py: 4,
                 }}
               >
                 <Grid item xs={12} md={6}>

@@ -13,34 +13,34 @@ const CompanySection = () => {
       <Box
         sx={{ backgroundColor: "#6e6e6e", width: "100vw", minHeight: "100vh" }}
       >
-        {" "}
-        <Box
-          sx={{
-            position: "relative",
-            height: "100vh",
-            textAlign: "justify",
-          }}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }} // Starts off invisible and 50px lower
+          whileInView={{ opacity: 1, y: 0 }} // Becomes visible and moves up to normal position
+          transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
         >
+          {" "}
           <Box
             sx={{
-              mt: { xs: "8%", md: "3%" },
-              height: "100%", // Full viewport height
-              width: "100vw",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundImage: 'url("/images/psbvcompany.jpg")',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundAttachment: "fixed",
+              position: "relative",
+              height: "100vh",
+              textAlign: "justify",
             }}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 80 }} // Starts off invisible and 50px lower
-              whileInView={{ opacity: 1, y: 0 }} // Becomes visible and moves up to normal position
-              transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+            <Box
+              sx={{
+                mt: { xs: "8%", md: "3%" },
+                height: "100%", // Full viewport height
+                width: "100vw",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundImage: 'url("/images/psbvcompany.jpg")',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
+              }}
             >
               <Grid
                 container
@@ -56,24 +56,30 @@ const CompanySection = () => {
                 }}
               >
                 <Grid item sx={12} md={12}>
-                  {" "}
-                  <Box>
-                    <Typography
-                      sx={{
-                        width: "100%",
-                        p: 4,
-                        fontSize: { xs: "2rem", md: "3rem" },
-                        fontWeight: "600",
-                        letterSpacing: "0.1rem",
-                        color: "#9eef0a",
-                        textShadow: "2px 2px 5px rgba(0,0,0,1)",
-                        textAlign: "center",
-                      }}
-                    >
-                      What Sets Us Apart?
-                    </Typography>
-                  </Box>
+                  <motion.div
+                    initial={{ opacity: 0, y: 80 }} // Starts off invisible and 50px lower
+                    whileInView={{ opacity: 1, y: 0 }} // Becomes visible and moves up to normal position
+                    transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+                  >
+                    <Box>
+                      <Typography
+                        sx={{
+                          width: "100%",
+                          p: 4,
+                          fontSize: { xs: "2rem", md: "3rem" },
+                          fontWeight: "600",
+                          letterSpacing: "0.1rem",
+                          color: "#9eef0a",
+                          textShadow: "2px 2px 5px rgba(0,0,0,1)",
+                          textAlign: "center",
+                        }}
+                      >
+                        What Sets Us Apart?
+                      </Typography>
+                    </Box>
+                  </motion.div>
                 </Grid>
+
                 <Grid item sx={12} md={6}>
                   <Box
                     sx={{
@@ -235,9 +241,9 @@ const CompanySection = () => {
                   </Box>
                 </Grid>
               </Grid>
-            </motion.div>
+            </Box>
           </Box>
-        </Box>
+        </motion.div>
       </Box>
     </>
   );
