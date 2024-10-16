@@ -70,7 +70,10 @@ const Navbar = () => {
   );
   return (
     <Box sx={{ position: "sticky", top: "0px", zIndex: 10 }}>
-      <AppBar position="static" sx={{ backgroundColor: "#6e6e6e" }}>
+      <AppBar
+        position="static"
+        sx={{ backgroundColor: "#6e6e6e", p: { xs: 1, md: 0 } }}
+      >
         <Toolbar>
           <Typography
             variant="h5"

@@ -11,7 +11,7 @@ const CustomerSection = () => {
           backgroundColor: "#fffff0",
           position: "relative",
           width: "100vw",
-          minHeight: { xs: "85vh", md: "90vh" },
+          minHeight: { xs: "90vh", md: "90vh" },
           textAlign: "center",
         }}
       >

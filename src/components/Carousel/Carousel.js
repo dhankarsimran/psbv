@@ -82,6 +82,7 @@ const Carousel = () => {
             px: 5,
             mx: 4,
             textAlign: "justify",
+            minHeight: { xs: "25vh", md: "16vh" },
           }}
         >
           {" "}
@@ -136,6 +137,7 @@ const Carousel = () => {
             px: 5,
             mx: 4,
             textAlign: "justify",
+            minHeight: { xs: "25vh", md: "16vh" },
           }}
         >
           {" "}
@@ -189,6 +191,7 @@ const Carousel = () => {
             px: 5,
             mx: 4,
             textAlign: "justify",
+            minHeight: { xs: "25vh", md: "16vh" },
           }}
         >
           {" "}
@@ -242,6 +245,7 @@ const Carousel = () => {
             px: 5,
             mx: 4,
             textAlign: "justify",
+            minHeight: { xs: "25vh", md: "16vh" },
           }}
         >
           {" "}
@@ -287,7 +291,7 @@ const Carousel = () => {
             borderTopRightRadius: "0.2rem",
           }}
         >
-          Great Service and Expertise!
+          Great Service and Complete Expertise!
         </Typography>
         <Typography
           sx={{
@@ -295,6 +299,7 @@ const Carousel = () => {
             px: 5,
             mx: 4,
             textAlign: "justify",
+            minHeight: { xs: "25vh", md: "16vh" },
           }}
         >
           {" "}
