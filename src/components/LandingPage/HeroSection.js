@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 const images = [
-  "/images/psbvsteel1.jpg",
-  "/images/psbvsteel2.jpg", // Add your second image path here
-  "/images/psbvsteel3.jpg", // Add your third image path here
+  "/images/psbvsteel1-min.jpg",
+  "/images/psbvsteel2-min.jpg", // Add your second image path here
+  "/images/psbvsteel3-min.jpg", // Add your third image path here
 ];
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
