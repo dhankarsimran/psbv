@@ -30,6 +30,7 @@ const Navbar = () => {
         height: "100%",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "space-between",
         backgroundColor: "rgba(110,110,110,1)",
         // backgroundImage: 'url("/images/psbvfactory1.jpg")',
         // backgroundSize: "cover",
