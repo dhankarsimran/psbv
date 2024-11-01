@@ -9,6 +9,7 @@ import SecurityIcon from "@mui/icons-material/Security";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const AboutSection = () => {
   const [bgLoaded, setBgLoaded] = useState(false);
@@ -84,25 +85,27 @@ const AboutSection = () => {
               investing in trust.
             </Typography>
             <Box sx={{ textAlign: "center" }}>
-              <Button
-                variant="contained"
-                sx={{
-                  py: 1,
-                  backgroundColor: " #9eef0a",
-                  color: "black",
-                  borderRadius: "2px",
-                  boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                  mx: 1,
-                  transition: "all 0.4s ease",
-                  "&:hover": {
-                    transform: "scale(1.1)",
-                    backgroundColor: "#9eef0a",
+              <Link href="/about">
+                <Button
+                  variant="contained"
+                  sx={{
+                    py: 1,
+                    backgroundColor: " #9eef0a",
+                    color: "black",
+                    borderRadius: "2px",
                     boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                  },
-                }}
-              >
-                Know About Us ?
-              </Button>
+                    mx: 1,
+                    transition: "all 0.4s ease",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                      backgroundColor: "#9eef0a",
+                      boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
+                    },
+                  }}
+                >
+                  Know About Us ?
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Box>

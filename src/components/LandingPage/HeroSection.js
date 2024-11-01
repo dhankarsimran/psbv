@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 const images = [
   "/images/psbvsteel1-min.jpg",
   "/images/psbvsteel2-min.jpg", // Add your second image path here
@@ -52,42 +53,46 @@ const HeroSection = () => {
             Delivering Excellence in Pipes and Fittings
           </Typography>
           <Box sx={{ m: 2 }}>
-            <Button
-              variant="contained"
-              sx={{
-                py: 1,
-                backgroundColor: " #9eef0a",
-                color: "black",
-                borderRadius: "2px",
-                boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                mx: 1,
-                transition: "all 0.4s ease",
-                "&:hover": {
-                  transform: "scale(1.1)",
-                  backgroundColor: "#9eef0a",
+            <Link href="/products">
+              <Button
+                variant="contained"
+                sx={{
+                  py: 1,
+                  backgroundColor: " #9eef0a",
+                  color: "black",
+                  borderRadius: "2px",
                   boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                },
-              }}
-            >
-              Explore
-            </Button>
-            <Button
-              varient="outlined"
-              sx={{
-                border: "2px solid #9eef0a",
-                color: "#9eef0a",
-                borderRadius: "2px",
-                boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                mx: 1,
-                transition: "all 0.4s ease",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                  mx: 1,
+                  transition: "all 0.4s ease",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                    backgroundColor: "#9eef0a",
+                    boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
+                  },
+                }}
+              >
+                Explore
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                varient="outlined"
+                sx={{
+                  border: "2px solid #9eef0a",
+                  color: "#9eef0a",
+                  borderRadius: "2px",
                   boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                },
-              }}
-            >
-              Connect
-            </Button>
+                  mx: 1,
+                  transition: "all 0.4s ease",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                    boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
+                  },
+                }}
+              >
+                Connect
+              </Button>
+            </Link>
           </Box>
         </Box>
 

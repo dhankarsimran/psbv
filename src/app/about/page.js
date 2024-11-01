@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import Link from "next/link";
 const AboutPage = () => {
   return (
     <Box sx={{ position: "relative" }}>
@@ -61,25 +62,27 @@ const AboutPage = () => {
               Solutions
             </Typography>
             <Box sx={{ textAlign: "center", mt: 5 }}>
-              <Button
-                variant="contained"
-                sx={{
-                  py: 1,
-                  backgroundColor: " #9eef0a",
-                  color: "black",
-                  borderRadius: "2px",
-                  boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                  mx: 1,
-                  transition: "all 0.4s ease",
-                  "&:hover": {
-                    transform: "scale(1.1)",
-                    backgroundColor: "#9eef0a",
+              <Link href="/contact">
+                <Button
+                  variant="contained"
+                  sx={{
+                    py: 1,
+                    backgroundColor: " #9eef0a",
+                    color: "black",
+                    borderRadius: "2px",
                     boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                  },
-                }}
-              >
-                Join Our Mission
-              </Button>
+                    mx: 1,
+                    transition: "all 0.4s ease",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                      backgroundColor: "#9eef0a",
+                      boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
+                    },
+                  }}
+                >
+                  Join Our Mission
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Box>

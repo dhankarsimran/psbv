@@ -122,16 +122,17 @@ const Navbar = () => {
         }}
       >
         <Toolbar>
-          <Typography
-            variant="h5"
-            sx={{
-              marginX: { xs: "0rem", md: "1.5rem" },
-              textShadow: "5px 5px 5px rgba(0,0,0,0.7)",
-            }}
-          >
-            P.S.B.V.
-          </Typography>
-
+          <Link href="/">
+            <Typography
+              variant="h5"
+              sx={{
+                marginX: { xs: "0rem", md: "1.5rem" },
+                textShadow: "5px 5px 5px rgba(0,0,0,0.7)",
+              }}
+            >
+              P.S.B.V.
+            </Typography>
+          </Link>
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
@@ -181,7 +182,7 @@ const Navbar = () => {
                 About Us
               </Typography>
             </Link>
-            <Link href="#">
+            <Link href="/products">
               <Typography
                 sx={{
                   px: 2,

@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ProductSection = () => {
   return (
@@ -214,26 +215,28 @@ const ProductSection = () => {
               whileInView={{ opacity: 1, y: 0 }} // Becomes visible and moves up to normal position
               transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
             > */}
-          <Button
-            variant="contained"
-            sx={{
-              py: 1,
-              backgroundColor: " #9eef0a",
-              color: "black",
-              borderRadius: "2px",
-              boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-              mx: 1,
-
-              transition: "all 0.4s ease",
-              "&:hover": {
-                transform: "scale(1.1)",
-                backgroundColor: "#9eef0a",
+          <Link href="/products">
+            <Button
+              variant="contained"
+              sx={{
+                py: 1,
+                backgroundColor: " #9eef0a",
+                color: "black",
+                borderRadius: "2px",
                 boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-              },
-            }}
-          >
-            View All Products
-          </Button>
+                mx: 1,
+
+                transition: "all 0.4s ease",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                  backgroundColor: "#9eef0a",
+                  boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
+                },
+              }}
+            >
+              View All Products
+            </Button>
+          </Link>
           {/* </motion.div> */}
         </Box>
         {/* </motion.div> */}
