@@ -61,7 +61,7 @@ const ContactPage = () => {
               Thank you for your interest in P.S.B.V. Pipe & Fitting. Whether
               you have questions about our products, need assistance with an
               order, or simply want to learn more about how we can meet your
-              piping needs, we're here to help.
+              piping needs, we&apos;re here to help.
             </Typography>
             <Typography
               sx={{
@@ -75,7 +75,7 @@ const ContactPage = () => {
                 textAlign: "center",
               }}
             >
-              "Your Queries Matter – Drop Us a Line!"
+              &quot;Your Queries Matter – Drop Us a Line!&quot;
             </Typography>
           </Box>
         </Box>

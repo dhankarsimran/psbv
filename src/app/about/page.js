@@ -519,21 +519,21 @@ const AboutPage = () => {
             }}
           >
             <Typography>
-              "From the beginning, I believed in building something that was
-              more than just a business – I wanted PSBV Pipe and Fitting to be a
-              name people could trust. Every pipe, fitting, and product that
-              leaves our hands carries with it a promise of quality and a
+              &quot;From the beginning, I believed in building something that
+              was more than just a business – I wanted PSBV Pipe and Fitting to
+              be a name people could trust. Every pipe, fitting, and product
+              that leaves our hands carries with it a promise of quality and a
               commitment to serve with integrity. We know our products are
               essential to your projects, big or small, and we don&apos;t take
-              that responsibility lightly."
+              that responsibility lightly.&quot;
             </Typography>
             <Typography sx={{ py: 2 }}>
               {" "}
-              "To me, success is about more than just growth; it&apos;s about
-              creating lasting relationships with our clients and positively
-              impacting the communities we serve. I&apos;m incredibly proud of
-              the trust our clients have placed in us, and we remain dedicated
-              to earning that trust every day."
+              &quot;To me, success is about more than just growth; it&apos;s
+              about creating lasting relationships with our clients and
+              positively impacting the communities we serve. I&apos;m incredibly
+              proud of the trust our clients have placed in us, and we remain
+              dedicated to earning that trust every day.&quot;
             </Typography>
             <Typography sx={{ fontWeight: "600", py: 2 }}>
               ~ Thank you for trusting PSBV Pipe and Fitting. We look forward to

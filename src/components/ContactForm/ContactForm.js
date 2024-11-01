@@ -188,7 +188,7 @@ const ContactForm = () => {
           }}
           fullWidth
         >
-          Let's Connect
+          Let&apos;s Connect
         </Button>
       </Box>
       {status && (
