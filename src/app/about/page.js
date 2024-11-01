@@ -556,20 +556,25 @@ const AboutPage = () => {
             <Box
               sx={{
                 position: "relative",
+
                 width: { xs: "80%", md: "50%" },
                 height: { xs: "80%", md: "100%" },
                 // boxShadow: "2px 2px 5px rgba(0,0,0,1)",
               }}
             >
               <Image
-                fill
+                // fill
                 style={{
-                  borderRadius: "50%",
+                  backgroundColor: "#6e6e6e",
+                  borderRadius: "5px",
                   borderBottom: "10px solid black",
                   borderLeft: "10px solid black",
-                  objectFit: "cover",
+                  // boxShadow: "5px 5px 5px black",
+                  // objectFit: "contain",
                 }}
-                src={"/images/carousel11-min.jpg"}
+                width={200}
+                height={300}
+                src={"/images/PsbvFounderimgbg.png"}
               />
             </Box>
             <Typography sx={{ py: 1, fontWeight: "600" }}>
