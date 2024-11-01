@@ -544,23 +544,25 @@ const AboutPage = () => {
           <Box
             sx={{
               width: { xs: "100%", md: "50%" },
-              height: { xs: "50vh", md: "60vh" },
+              // height: { xs: "50vh", md: "60vh" },
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              position: "relative",
+              // position: "relative",
             }}
           >
             <Box
-              sx={{
-                position: "relative",
-
-                width: { xs: "80%", md: "50%" },
-                height: { xs: "80%", md: "100%" },
-                // boxShadow: "2px 2px 5px rgba(0,0,0,1)",
-              }}
+              sx={
+                {
+                  // mt: 8,
+                  // position: "relative",
+                  // width: { xs: "80%", md: "50%" },
+                  // height: { xs: "80%", md: "100%" },
+                  // boxShadow: "2px 2px 5px rgba(0,0,0,1)",
+                }
+              }
             >
               <Image
                 // fill
@@ -569,6 +571,7 @@ const AboutPage = () => {
                   borderRadius: "5px",
                   borderBottom: "10px solid black",
                   borderLeft: "10px solid black",
+
                   // boxShadow: "5px 5px 5px black",
                   // objectFit: "contain",
                 }}
