@@ -149,6 +149,7 @@ const AboutSection = () => {
                 color: "white",
                 px: { xs: 2, md: 10 },
                 py: 4,
+                overflowY: { xs: "auto", md: "unset" },
               }}
             >
               <Grid item xs={12} md={6}>

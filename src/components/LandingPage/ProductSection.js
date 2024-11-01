@@ -67,7 +67,7 @@ const ProductSection = () => {
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      height="140"
+                      height="180"
                       image="/images/psbvpipe-min.jpg"
                       alt="Steel Pipe"
                     />
@@ -82,20 +82,6 @@ const ProductSection = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      sx={{
-                        "&:hover": {
-                          color: "black",
-                          backgroundColor: "#9eef0a",
-                          boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                        },
-                      }}
-                    >
-                      View
-                    </Button>
-                  </CardActions>
                 </Card>
               </Box>
               {/* </motion.div> */}
@@ -121,7 +107,7 @@ const ProductSection = () => {
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      height="140"
+                      height="180"
                       image="/images/psbvroundbar-min.jpg"
                       alt="Round Bars"
                     />
@@ -135,20 +121,6 @@ const ProductSection = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      sx={{
-                        "&:hover": {
-                          color: "black",
-                          backgroundColor: "#9eef0a",
-                          boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                        },
-                      }}
-                    >
-                      View
-                    </Button>
-                  </CardActions>
                 </Card>
               </Box>
               {/* </motion.div> */}
@@ -174,7 +146,7 @@ const ProductSection = () => {
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      height="140"
+                      height="180"
                       image="/images/psbvfittings-min.jpg"
                       alt="Pipe Fittings"
                     />
@@ -189,20 +161,6 @@ const ProductSection = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      sx={{
-                        "&:hover": {
-                          color: "black",
-                          backgroundColor: "#9eef0a",
-                          boxShadow: " 5px 5px 5px rgba(0,0,0,0.7)",
-                        },
-                      }}
-                    >
-                      View
-                    </Button>
-                  </CardActions>
                 </Card>
               </Box>{" "}
               {/* </motion.div> */}

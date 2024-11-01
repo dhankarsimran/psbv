@@ -50,7 +50,7 @@ const Navbar = () => {
         {[
           { text: "Home", href: "/" },
           { text: "About Us", href: "/about" },
-          { text: "Products", href: "/product" },
+          { text: "Products", href: "/products" },
           { text: "Contact Us", href: "/contact" },
         ].map((item) => (
           <ListItem
