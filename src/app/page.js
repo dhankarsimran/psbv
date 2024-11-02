@@ -33,6 +33,7 @@ export default function Home() {
     return () => clearInterval(interval); // Clear the interval on component unmount
   }, []);
   return (
+    //All components for Landing Page are here
     <>
       {/* SECTION 1 */}
       <HeroSection />
