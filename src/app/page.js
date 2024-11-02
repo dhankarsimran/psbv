@@ -21,6 +21,7 @@ const images = [
   "/images/psbvsteel2.jpg", // Add your second image path here
   "/images/psbvsteel3.jpg", // Add your third image path here
 ];
+
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
 
